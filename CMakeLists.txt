@@ -10,9 +10,11 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -pedantic")
 
 set(PJTEST_SRC_FILES
 	runtests.c
+	util/test_pjassert.c
 	)
 
 set(PJPAINT_SRC_FILES
+	PJ/util/pjassert.c
 	)
 
 add_executable(runtests WIN32

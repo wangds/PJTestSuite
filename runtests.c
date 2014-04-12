@@ -2,8 +2,10 @@
 
 #include <stdio.h>
 #include "pjtest_basic.h"
+#include "util/test_util.h"
 
 static const TestSuite *suite[] = {
+	&TS_pjassert,
 	NULL
 };
 
