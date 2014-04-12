@@ -6,6 +6,7 @@
 
 static const TestSuite *suite[] = {
 	&TS_pjassert,
+	&TS_slist,
 	NULL
 };
 
@@ -57,4 +58,21 @@ cleanup_registry:
 
 end:
 	return CU_get_error();
+}
+
+/*--------------------------------------------------------------*/
+
+/* Memory management.
+ *
+ * We don't really want to pull in PJ's memory management, which
+ * includes TFILEs.  Eventually we'll get rid of it altogether.
+ */
+
+#include <stdlib.h>
+#include "memory.h"
+
+void
+pj_free(void *x)
+{
+	free(x);
 }
