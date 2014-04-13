@@ -7,6 +7,7 @@
 static const TestSuite *suite[] = {
 	&TS_pjassert,
 	&TS_slist,
+	&TS_dlist,
 	NULL
 };
 

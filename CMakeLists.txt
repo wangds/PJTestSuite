@@ -10,11 +10,13 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -pedantic")
 
 set(PJTEST_SRC_FILES
 	runtests.c
+	util/test_dlist.c
 	util/test_pjassert.c
 	util/test_slist.c
 	)
 
 set(PJPAINT_SRC_FILES
+	PJ/util/dlist.c
 	PJ/util/pjassert.c
 	PJ/util/slist.c
 	)
