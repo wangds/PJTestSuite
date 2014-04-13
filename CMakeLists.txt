@@ -13,12 +13,14 @@ set(PJTEST_SRC_FILES
 	util/test_dlist.c
 	util/test_pjassert.c
 	util/test_slist.c
+	util/test_textutil.c
 	)
 
 set(PJPAINT_SRC_FILES
 	PJ/util/dlist.c
 	PJ/util/pjassert.c
 	PJ/util/slist.c
+	PJ/util/textutil.c
 	)
 
 add_executable(runtests WIN32
