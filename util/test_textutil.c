@@ -5,6 +5,14 @@
 #include "textutil.h"
 
 static void
+do_text_count(void)
+{
+	CU_ASSERT(text_count_until_dir_delim("") == 0);
+	CU_ASSERT(text_count_until_dir_delim("\\") == 0);
+	CU_ASSERT(text_count_until_dir_delim("abc/123") == 3);
+}
+
+static void
 do_text_ncopy(void)
 {
 	char dst[16];
@@ -48,6 +56,7 @@ do_text_ncopy_dir_delim(void)
 }
 
 static const TestList TL_textutil[] = {
+	{ "text_count", do_text_count },
 	{ "text_ncopy", do_text_ncopy },
 	{ "text_ncopy_dir_delim", do_text_ncopy_dir_delim },
 	{ NULL, NULL }
