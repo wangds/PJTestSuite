@@ -2,13 +2,19 @@
 
 #include <stdio.h>
 #include "pjtest_basic.h"
+#include "fileio/test_fileio.h"
 #include "util/test_util.h"
 
 static const TestSuite *suite[] = {
+	/* util. */
 	&TS_pjassert,
 	&TS_slist,
 	&TS_dlist,
 	&TS_textutil,
+
+	/* fileio. */
+	&TS_filepath,
+
 	NULL
 };
 
@@ -72,6 +78,12 @@ end:
 
 #include <stdlib.h>
 #include "memory.h"
+
+void *
+pj_malloc(unsigned size)
+{
+	return malloc(size);
+}
 
 void
 pj_free(void *x)
